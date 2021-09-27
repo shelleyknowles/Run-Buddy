@@ -6,18 +6,18 @@
 }
 
 .page-title {
-    font-size: 42px;
-    font-weight: normal;
-    font-style: italic;
-    display: inline-block;
-    padding: 0 80px 15px 80px;
-    border-bottom: 3px solid #fce138;
     color: #fce138;
+    display: inline-block;
+    border-bottom: 3px solid #fce138;
+    padding: 0 80px 15px 80px;
+    font-weight: normal;
+    font-size: 42px;
+    font-style: italic;
 }
 
 .secondary-content {
     width: 80%;
-    align-items: center;
+    margin: 0 auto;
     color: #024e76;
 }
 
