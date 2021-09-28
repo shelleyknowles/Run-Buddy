@@ -5,12 +5,13 @@ box-sizing: border-box;
 }
 
 body {
-  /*more on this crazy alphanumerical value in a minute! */
   color: #39a6b2;
   font-family: Helvetica, Arial, sans-sarif;
 }
 
-/* apply styles to <header> */
+
+/* HEADER/ NAV BAR STYLES START */
+
 header {
   padding: 20px 35px;
   background-color: #39a6b2;
@@ -51,10 +52,6 @@ header nav ul {
     list-style: none;
 }
 
-header nav ul li {
-    display: inline;
-}
-
 header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
@@ -69,12 +66,18 @@ header nav ul li a:hover {
     text-shadow: none;
 }
 
+/* HEADER/ NAV BAR STYLES END*/
+
+
+
+/* FOOTER STYLES START*/
 footer {
     justify-content: space-between;
     flex-wrap: wrap;
     background: #fce138;
     width: 100%;
     padding: 40px 35px;
+    display: flex;
 }
 
 footer h2 {
@@ -91,7 +94,9 @@ footer div {
 footer a {
     color: #024e76
 }
+/* END FOOTER STYLES*/
 
+/*STYLE ALL SECTION TAGS*/
 section {
     padding: 60px;
 } 
@@ -107,7 +112,22 @@ section {
     background-attachment: fixed;
     background-position: 80%;   
 }
-/* Hero Style End */
+
+.hero-cta {
+    width: 35%;
+    text-align: right;
+    margin: 3.5%;
+    color: #fff;
+    line-height: 1.2;
+    font-size: 18px;
+}
+
+.hero-cta h2 {
+    font-style: italic;
+    font-size: 55px;
+    color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
 .hero-form {
     width: 40%;
@@ -118,6 +138,10 @@ section {
     color: #024e76;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
+}
+
+.hero-form button:hover {
+    background-color: #39a6b2;
 }
 
 .hero-form h3 {
@@ -157,25 +181,30 @@ section {
     font-size: 16px;
     border-radius: 10px;
 }
+/* Hero Style End */
 
-.hero-form button:hover {
-    background-color: #39a6b2;
+
+/*SECTION TITLE STYLES START*/
+.section-title {
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
+    font-size: 48px;    
+    border-bottom: 3px solid;
+    color: #024e76;
 }
 
-.hero-cta {
-    width: 35%;
-    text-align: right;
-    margin: 3.5%;
-    color: #fff;
-    line-height: 1.2;
+.primary-border{
+    border-color: #fce138;
 }
 
-.hero-cta h2 {
-    font-style: italic;
-    font-size: 55px;
-    color: #fce138;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.secondary-border {
+    border-color: #39a6b2;
 }
+/*SECTION STYLES END*/
+
+/*WHAT WE DO STYLES*/
 
 .intro p {
     text-align: center;
@@ -185,32 +214,18 @@ section {
     font-size: 20px;
     margin: 0 auto;
 }
+/*WHAT WE DO STYLES END*/
 
+
+/*WHAT YOU DO STYLES START*/
 .steps {
    background: #fce138;
-}
-
-.step h3 {
-    color: #024e76;
-    font-size: 46px;
-    flex: 1 30%;
-
-}
-
-.step-text p {
-    color: #39a6b2;
-    font-size: 18px;
-}
-
-.step-text h4 {
-    font-size: 26px;
-    line-height: 1.5;
-    color: #024e76;
 }
 
 .step {
     margin: 50px auto;
     padding-bottom: 50px;
+    border-bottom: 1px solid #39a6b2;
     width: 80%;
     display: flex;
     flex-wrap: wrap;
@@ -218,13 +233,15 @@ section {
     justify-content: space-between;
 }
 
-.step:nth-child(even) {
-    border-bottom: 1px solid #39a6b2;
-}
-
-.step:not(:last-child) {
+.step:last-child) {
     border-bottom: 1px solid #39a6b2;
   }
+
+.step h3 {
+    color: #024e76;
+    font-size: 46px;
+    flex: 1 30%;
+}
 
 .step-info {
     display: flex;
@@ -242,26 +259,29 @@ section {
     max-width: 100%;
 }
 
-.section-title {
-    padding-bottom: 20px;
-    text-align: center;
-    margin: 0 auto 35px auto;
-    width: 50%;
-    font-size: 48px;    
-    border-bottom: 3px solid;
+.step-img img {
+    max-width: 100%;
+}
+
+.step-text p {
+    color: #39a6b2;
+    font-size: 18px;
+}
+
+.step-text h4 {
+    font-size: 26px;
+    line-height: 1.5;
     color: #024e76;
 }
+/*WHAT YOU DO STYLES END*/
 
-.step-text {
-    flex: 12;
-}
-
-.primary-border{
-    border-color: #fce138;
-}
-
-.secondary-border {
-    border-color: #39a6b2;
+/*MEET THE TRAINERS START*/
+.trainers {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .trainer {
@@ -269,14 +289,6 @@ section {
     background: #024e76;
     color: #fce138;
     flex: 1;
-}
-
-.trainers {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .trainer img {
@@ -301,16 +313,9 @@ section {
 .trainer-bio p {
     font-size: 17px;
 }
+/*TRAINER STYLES END*/
 
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-/* REACH OUT STYLES START */
+/*REACH OUT STYLES START*/
 .contact {
    background: #024e76;
 }
@@ -323,6 +328,11 @@ section {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.contact-info > * {
+    flex: 1;
+    margin: 15px;
 }
 
 .contact-info iframe {
@@ -345,15 +355,6 @@ section {
     font-style: normal;
 }
 
-.contact-info a {
-    color: #fce138;
-}
-
-.contact-info > * {
-    flex: 1;
-    margin: 15px;
-}
-
 .contact-form input, .contact-form textarea {
     border: 1px solid #024e76;
     display: block;
@@ -364,10 +365,7 @@ section {
     margin-bottom: 15px;
     margin-top: 5px;
     border-radius: 10px;
-}
-
-.contact-form input, .contact-form textarea {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255,255,255, 0.75);
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
@@ -391,7 +389,19 @@ section {
     background: #39a6b2;
 }
 
+.contact-info a {
+    color: #fce138;
+  }
 /* REACH OUT STYLES END */
+
+/*UTILITIES*/
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
 
 .flex-row {
     display: flex;
